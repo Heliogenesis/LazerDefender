@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f87c49ff416704343b0df199f73f97bb
-timeCreated: 1495401156
+timeCreated: 1495834603
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +8,8 @@ TextureImporter:
     21300002: laser-bolts_1
     21300004: laser-bolts_2
     21300006: laser-bolts_3
+    21300008: laser-bolts_4
+    21300010: laser-bolts_5
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -86,11 +88,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6
-        y: 20
+        y: 36
         width: 5
         height: 5
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -99,11 +101,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 20
+        y: 36
         width: 5
         height: 5
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -112,11 +114,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6
-        y: 2
+        y: 18
         width: 5
         height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -125,11 +127,37 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 1
+        y: 17
         width: 5
         height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laser-bolts_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laser-bolts_5
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 2
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
