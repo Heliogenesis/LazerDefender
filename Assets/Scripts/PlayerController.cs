@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     private void FireLaser()
     {
         GameObject playerLaser = Instantiate(projectile, transform.position + new Vector3(0, 0, 1), Quaternion.identity) as GameObject;
+        playerLaser.GetComponent<Rigidbody2D>().velocity = new Vector3(0, projectileSpeed);
     }
 
     private void Start()
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour
             transform.position += Vector3.right * speed * Time.deltaTime;
 
         }
-        else if (GetComponent<Animator>().runtimeAnimatorController != idle)
+        else if (GetComponent<Animator>().runtimeAnimatorController != idle || GetComponent<Animator>().runtimeAnimatorController != forward)
         {
             GetComponent<Animator>().runtimeAnimatorController = idle;
         }

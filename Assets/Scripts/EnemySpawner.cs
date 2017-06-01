@@ -13,6 +13,7 @@ public class EnemySpawner : MonoBehaviour
     public float height = 5f;
     public float heightOffset;
     public float speed = 5;
+    public int scoreGiven = 100;
 
     public float spawnDelay = .5f;
 
@@ -28,6 +29,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
+        GameObject.Find("Score").GetComponent<ScoreHandler>();
         float distanceToCamera = transform.position.z - Camera.main.transform.position.z;
         Vector3 leftEdge = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, distanceToCamera));
         Vector3 rightEdge = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, distanceToCamera));

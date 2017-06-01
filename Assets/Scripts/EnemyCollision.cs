@@ -6,6 +6,13 @@ public class EnemyCollision : MonoBehaviour
 {
 
     public float health;
+    public int scoreGiven;
+    private ScoreHandler scoreHandler;
+
+    void Start()
+    {
+        scoreHandler = GameObject.Find("Score").GetComponent<ScoreHandler>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,6 +23,7 @@ public class EnemyCollision : MonoBehaviour
             projectile.Hit();
             if (health <= 0)
             {
+                scoreHandler.ScoreUpdater(scoreGiven);
                 Destroy(gameObject);
             }
         }
