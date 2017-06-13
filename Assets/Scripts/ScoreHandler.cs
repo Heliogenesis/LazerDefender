@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ScoreHandler : MonoBehaviour
 {
-    int score = 0;
-    Text text;
+    public static int score = 0;
+    private static Text text;
 
     void Start()
     {
@@ -21,9 +21,8 @@ public class ScoreHandler : MonoBehaviour
 
     }
 
-    public void ResetScore()
+    public static void ResetScore()
     {
         score = 0;
-        text.text = "Score: " + score.ToString();
     }
 }

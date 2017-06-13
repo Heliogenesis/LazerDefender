@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyCollision : MonoBehaviour
 {
-
+    public AudioClip enemyDeathSound;
     public float health;
     public int scoreGiven;
     private ScoreHandler scoreHandler;
@@ -23,6 +23,7 @@ public class EnemyCollision : MonoBehaviour
             projectile.Hit();
             if (health <= 0)
             {
+                AudioSource.PlayClipAtPoint(enemyDeathSound, new Vector3(0, 0, 0));
                 scoreHandler.ScoreUpdater(scoreGiven);
                 Destroy(gameObject);
             }

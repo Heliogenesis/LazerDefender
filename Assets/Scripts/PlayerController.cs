@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public AudioClip laserFire;
+    public AudioClip playerDeathSound;
+
     public float health = 250f;
 
     public float speed;
@@ -27,6 +30,8 @@ public class PlayerController : MonoBehaviour
     {
         GameObject playerLaser = Instantiate(projectile, transform.position + new Vector3(0, 0, 1), Quaternion.identity) as GameObject;
         playerLaser.GetComponent<Rigidbody2D>().velocity = new Vector3(0, projectileSpeed);
+        AudioSource.PlayClipAtPoint(laserFire, new Vector3(0, 0, 0));
+
     }
 
     private void Start()
@@ -81,6 +86,9 @@ public class PlayerController : MonoBehaviour
             projectile.Hit();
             if (health <= 0)
             {
+                AudioSource.PlayClipAtPoint(playerDeathSound, new Vector3(0, 0, 0), .5f);
+                LevelManager Manager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+                Manager.LoadNextLevel();
                 Destroy(gameObject);
             }
         }
